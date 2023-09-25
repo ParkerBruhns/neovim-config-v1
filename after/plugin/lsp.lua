@@ -4,6 +4,8 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
    'rust_analyzer',
+   -- 'dartls',
+   'jdtls'
 })
 
 local cmp = require("cmp")
@@ -13,9 +15,9 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
    -- ['<A-.>'] = cmp.mapping.select_next_item(cmp_select),
    -- ['<A-e>'] = cmp.mapping.confirm({select = true}),
    -- ['<A-n>'] = cmp.mapping.complete(),
-   ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
-   ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
-   ['<cr>'] = cmp.mapping.confirm({select = true}),
+   ['<Up>'] = cmp.mapping.select_prev_item(cmp_select),
+   ["<Down>"] = cmp.mapping.select_next_item(cmp_select),
+   ['<Tab>'] = cmp.mapping.confirm({select = true}),
    ['<A-n>'] = cmp.mapping.complete(),
 })
 
@@ -43,6 +45,6 @@ lsp.on_attach(function(client, buffnr)
   vim.keymap.set("n", "<leader>h", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup_servers({'dartls', force = true})
+-- lsp.setup_servers({'dartls', force = true})
 
 lsp.setup()

@@ -3,7 +3,8 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-   -- Packer can manage itself
+
+   -- LSP-Zero config
    use 'wbthomason/packer.nvim'
 
    use 'nvim-lua/plenary.nvim'
@@ -30,22 +31,6 @@ return require('packer').startup(function(use)
    use 'mfussenegger/nvim-dap'
    use 'mfussenegger/nvim-jdtls'
    use 'ThePrimeagen/vim-be-good'
-   -- use 'nvim-tree/nvim-tree.lua'
-   -- use 'nvim-tree/nvim-web-devicons'
-   use 'nvim-lualine/lualine.nvim'
-   use {
-      'akinsho/flutter-tools.nvim',
-      requires = {
-         'nvim-lua/plenary.nvim',
-         'stevearc/dressing.nvim', -- optional for vim.ui.select
-      },
-   }
-   use {
-      'numToStr/Comment.nvim',
-      config = function()
-         require('Comment').setup()
-      end
-   }
    use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v2.x',
@@ -60,5 +45,25 @@ return require('packer').startup(function(use)
          {'hrsh7th/cmp-nvim-lsp'}, -- Required
          {'L3MON4D3/LuaSnip'},     -- Required
       }
+   }
+
+   -- My additions
+   -- use 'nvim-tree/nvim-tree.lua'
+   -- use 'nvim-tree/nvim-web-devicons'
+   use 'nvim-lualine/lualine.nvim'
+   use {
+      'numToStr/Comment.nvim',
+      config = function()
+         require('Comment').setup()
+      end
+   }
+
+   -- Flutter Plugins
+   use {
+      'akinsho/flutter-tools.nvim',
+      requires = {
+         'nvim-lua/plenary.nvim',
+         'stevearc/dressing.nvim', -- optional for vim.ui.select
+      },
    }
 end)
