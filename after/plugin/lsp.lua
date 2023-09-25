@@ -1,4 +1,3 @@
-
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
@@ -10,11 +9,16 @@ lsp.ensure_installed({
 local cmp = require("cmp")
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
-   ['<A-p>'] = cmp.mapping.select_prev_item(cmp_select),
-   ['<A-.>'] = cmp.mapping.select_next_item(cmp_select),
-   ['<A-e>'] = cmp.mapping.confirm({select = true}),
+   -- ['<A-p>'] = cmp.mapping.select_prev_item(cmp_select),
+   -- ['<A-.>'] = cmp.mapping.select_next_item(cmp_select),
+   -- ['<A-e>'] = cmp.mapping.confirm({select = true}),
+   -- ['<A-n>'] = cmp.mapping.complete(),
+   ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
+   ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
+   ['<cr>'] = cmp.mapping.confirm({select = true}),
    ['<A-n>'] = cmp.mapping.complete(),
 })
+
 
 lsp.set_preferences({
    sign_icons = { }
@@ -38,5 +42,7 @@ lsp.on_attach(function(client, buffnr)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("n", "<leader>h", function() vim.lsp.buf.signature_help() end, opts)
 end)
+
+lsp.setup_servers({'dartls', force = true})
 
 lsp.setup()
