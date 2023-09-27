@@ -1,29 +1,31 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
+vop = vim.opt
 
-vim.opt.tabstop = 3
-vim.opt.softtabstop = 3
-vim.opt.shiftwidth = 3
-vim.opt.expandtab = true
+vop.nu = true
+vop.relativenumber = true
 
-vim.opt.wrap = false
+vop.tabstop = 3
+vop.softtabstop = 3
+vop.shiftwidth = 3
+vop.expandtab = true
 
---vim.opt.swapfile = false
---vim.opt.backup = false
---vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
---vim.opt.undofile = true
+vop.wrap = false
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+--o.swapfile = false
+--o.backup = false
+--o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+--o.undofile = true
 
-vim.opt.termguicolors = true
+vop.hlsearch = false
+vop.incsearch = true
 
-vim.opt.scrolloff = 15
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
+vop.termguicolors = true
 
-vim.opt.updatetime = 50
+vop.scrolloff = 15
+vop.signcolumn = "no"
+vop.isfname:append("@-@")
 
-vim.opt.colorcolumn = "80"
+vop.updatetime = 50
+
+vop.colorcolumn = "80"
 
 vim.g.mapleader = " "
