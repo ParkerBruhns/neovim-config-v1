@@ -13,12 +13,18 @@ return require('packer').startup(function(use)
       -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
    }
-   use 'navarasu/onedark.nvim'
+
+   -- Colorschemes
    use({
       'rose-pine/neovim',
-      as = 'rose-pine',
+      'joshdick/onedark.vim',
+      'wincent/base16-nvim',
+      'liuchengxu/space-vim-dark',
+      'luckydev/150colors',
+      'folke/tokyonight.nvim',
+
       config = function()
-         vim.cmd('colorscheme rose-pine')
+         vim.cmd('colorscheme onedark')
       end
    })
 

@@ -3,6 +3,8 @@ vop = vim.opt
 vop.nu = true
 vop.relativenumber = true
 
+vop.mouse = ""
+
 vop.tabstop = 3
 vop.softtabstop = 3
 vop.shiftwidth = 3
@@ -10,8 +12,8 @@ vop.expandtab = true
 
 vop.wrap = false
 
---o.swapfile = false
---o.backup = false
+-- o.swapfile = false
+-- o.backup = false
 --o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 --o.undofile = true
 
