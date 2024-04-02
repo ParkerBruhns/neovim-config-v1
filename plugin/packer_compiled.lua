@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/home/parkerbruhns/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["darcula-solid.nvim"] = {
+    loaded = true,
+    path = "/home/parkerbruhns/.local/share/nvim/site/pack/packer/start/darcula-solid.nvim",
+    url = "https://github.com/briones-gabriel/darcula-solid.nvim"
+  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/parkerbruhns/.local/share/nvim/site/pack/packer/start/dressing.nvim",
@@ -129,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/parkerbruhns/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/parkerbruhns/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,

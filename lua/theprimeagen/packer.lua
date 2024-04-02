@@ -27,6 +27,9 @@ return require('packer').startup(function(use)
          vim.cmd('colorscheme onedark')
       end
    })
+   use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
+   -- use {'neoclide/coc.nvim', branch = 'release'}
+   -- use 'lervag/vimtex'
 
 
    use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -66,7 +69,6 @@ return require('packer').startup(function(use)
    }
 
    -- Flutter Plugins
-   use 'nvim-lua/plenary.nvim'
    use 'stevearc/dressing.nvim'
    use {
       'akinsho/flutter-tools.nvim',

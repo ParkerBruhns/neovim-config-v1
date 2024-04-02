@@ -3,7 +3,7 @@ function ColorMyPencils(color)
    -- color = color or "space-vim-dark"
    -- color = color or "onedark"
    -- color = color or "coffee"
-   color = color or "tokyonight"
+   color = color or "darcula-solid"
 
    vim.cmd.colorscheme(color)
 
